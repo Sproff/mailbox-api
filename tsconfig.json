@@ -3,11 +3,12 @@
     "target": "es2016",
     "module": "commonjs",
     "moduleResolution": "node",
-    "baseUrl": "./",
+    "baseUrl": "./src",
+    "rootDir": "./src",
+    "outDir": "./dist",
     "paths": {
       "@/*": ["./src/*"]
     },
-    "outDir": "./dist",
     "typeRoots": ["./src/@types", "./node_modules/@types"],
     "resolveJsonModule": true,
     "esModuleInterop": true,
@@ -17,5 +18,7 @@
     "noEmit": false,
     "noUnusedLocals": true,
     "noUnusedParameters": true
-  }
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules"]
 }
