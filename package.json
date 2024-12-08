@@ -7,8 +7,8 @@
   "scripts": {
     "dev": "nodemon --exec ts-node -r tsconfig-paths/register app.ts",
     "format": "prettier --write \"src/**/*.ts\"",
-    "build": "tsc",
-    "start": "node dist/app.js",
+    "build": "npx tsc && tsc-alias",
+    "start": "node dist/src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -34,6 +34,7 @@
     "nodemon": "^3.1.7",
     "prettier": "^3.4.2",
     "ts-node": "^10.9.2",
+    "tsc-alias": "^1.8.10",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.7.2"
   }
